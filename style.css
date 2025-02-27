@@ -148,13 +148,17 @@ input{
 }
 
 input:focus {
-    border-bottom: 2px solid #ff7f50; /* Muda a cor da borda inferior para coral */
-    outline: none; /* Remove a borda/outline padrão do navegador */
-    box-shadow: 0 0 3px #ff7f50; /* Opcional: adiciona um leve brilho */
+    border-bottom: 2px solid #ff7f50;
+    outline: none; 
+    box-shadow: 0 0 3px #ff7f50;
 }
 
 input:focus:invalid{
     border-bottom: 2px solid red;
+}
+
+input:focus:valid{
+    border-bottom: 2px solid green;
 }
 label{
     color: black;
@@ -168,31 +172,78 @@ p > a{
 @media (max-width: 768px) {
     #front {
         flex-direction: column; 
-        height: auto; 
+        height: auto;
+        position: relative;
     }
 
     img {
-        width: 100%; 
-        height: auto; 
-    }
-
-    #register {
-        grid-template-columns: 1fr; 
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
     }
 
     #bar {
-        position: static; 
+        position: relative;
         text-align: center;
-        margin-top: 20px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0;
     }
 
     button {
-        width: 100%; 
-        padding: 15px;
-        font-size: 18px; 
+        position: relative;
+        top: 0;
+        width: 80%;
+        max-width: 200px;
+        margin: 15px auto;
+    }
+
+    #register {
+        position: relative;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 20px auto;
     }
 
     #first, #two, #three {
-        margin-left: 0; 
+        margin: 10px auto;
+        text-align: center;
+        width: 90%;
+    }
+
+    form {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #bottom {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    input {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    label {
+        margin: 5px auto;
+        text-align: left;
+        width: 90%;
     }
 }
